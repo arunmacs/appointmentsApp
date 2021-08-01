@@ -51,7 +51,7 @@ class Appointments extends Component {
 
   updateDateField = event => {
     // const date = format(new Date(event.target.value), 'dd MM yyyy,EEEE')
-    // console.log(date)
+    // console.log(event.target.value)
 
     this.setState({dateInput: event.target.value})
   }
@@ -119,7 +119,7 @@ class Appointments extends Component {
           />
         </div>
         <div className="input-container">
-          <label htmlFor="date">Date</label>
+          <label htmlFor="date">DATE</label>
           <input
             type="date"
             value={dateInput}

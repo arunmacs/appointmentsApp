@@ -1,6 +1,6 @@
 import './index.css'
 
-const star =
+const starNoFill =
   'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
 const starFill =
@@ -11,7 +11,7 @@ const AppointmentItem = props => {
   const {id, title, date, isStarred} = appointmentItem
   //   console.log(props)
 
-  const starred = isStarred ? starFill : star
+  const star = isStarred ? starFill : starNoFill
 
   const changePriority = () => {
     toggleStarMark(id)
@@ -20,7 +20,7 @@ const AppointmentItem = props => {
   return (
     <li className="appointment-item">
       <div className="title-date-container">
-        <h1 className="title">{title}</h1>
+        <p className="title">{title}</p>
         <p className="date">Date: {date}</p>
       </div>
       {/* <div className="star-container"> */}
@@ -30,7 +30,7 @@ const AppointmentItem = props => {
         onClick={changePriority}
         className="star-button"
       >
-        <img src={starred} alt="star" className="star-img" />
+        <img src={star} alt="star" className="star-img" />
       </button>
       {/* </div> */}
     </li>
