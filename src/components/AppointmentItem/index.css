@@ -50,6 +50,8 @@
   border: 0;
   padding: 0px;
   cursor: pointer;
+  align-self: flex-start;
+  margin: 8px 3px 3px 3px;
 }
 
 @media (min-width: 768px) {
@@ -62,7 +64,7 @@
 
   .title {
     color: #171f46;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     margin: 3px 3px 4px 3px;
     overflow: hidden;

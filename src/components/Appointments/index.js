@@ -4,42 +4,42 @@ import {format} from 'date-fns'
 import AppointmentItem from '../AppointmentItem'
 import './index.css'
 
-const initialList = [
-  {
-    id: uuid(),
-    title: 'Meeting',
-    date: format(new Date(2021, 5, 8), 'dd MM yyyy,EEEE'),
-    isStarred: false,
-  },
-  {
-    id: uuid(),
-    title: 'Vacation',
-    date: format(new Date(2021, 7, 8), 'dd MM yyyy,EEEE'),
-    isStarred: true,
-  },
-  {
-    id: uuid(),
-    title: 'Business Trip Work',
-    date: format(new Date(2021, 15, 8), 'dd MM yyyy,EEEE'),
-    isStarred: true,
-  },
-  {
-    id: uuid(),
-    title: 'InAuguration',
-    date: format(new Date(2021, 15, 8), 'dd MM yyyy,EEEE'),
-    isStarred: false,
-  },
-  {
-    id: uuid(),
-    title: 'Hospital Checkup',
-    date: format(new Date(2021, 7, 8), 'dd MM yyyy,EEEE'),
-    isStarred: false,
-  },
-]
+// const initialList = [
+//   {
+//     id: uuid(),
+//     title: 'Meeting',
+//     date: format(new Date(2021, 5, 8), 'dd MM yyyy,EEEE'),
+//     isStarred: false,
+//   },
+//   {
+//     id: uuid(),
+//     title: 'Vacation',
+//     date: format(new Date(2021, 7, 8), 'dd MM yyyy,EEEE'),
+//     isStarred: true,
+//   },
+//   {
+//     id: uuid(),
+//     title: 'Business Trip Work',
+//     date: format(new Date(2021, 15, 8), 'dd MM yyyy,EEEE'),
+//     isStarred: true,
+//   },
+//   {
+//     id: uuid(),
+//     title: 'InAuguration',
+//     date: format(new Date(2021, 15, 8), 'dd MM yyyy,EEEE'),
+//     isStarred: false,
+//   },
+//   {
+//     id: uuid(),
+//     title: 'Hospital Checkup',
+//     date: format(new Date(2021, 7, 8), 'dd MM yyyy,EEEE'),
+//     isStarred: false,
+//   },
+// ]
 
 class Appointments extends Component {
   state = {
-    appointmentsList: [...initialList],
+    appointmentsList: [],
     titleInput: '',
     dateInput: '',
     isFilterActive: false,
@@ -62,7 +62,7 @@ class Appointments extends Component {
     const appointment = {
       id: uuid(),
       title: titleInput,
-      date: format(new Date(dateInput), 'dd MM yyyy,EEEE'),
+      date: format(new Date(dateInput), 'dd MMMM yyyy,EEEE'),
       isStarred: false,
     }
 

@@ -23,16 +23,16 @@ const AppointmentItem = props => {
         <h1 className="title">{title}</h1>
         <p className="date">Date: {date}</p>
       </div>
-      <div className="star-container">
-        <button
-          type="button"
-          testid="star"
-          onClick={changePriority}
-          className="star-button"
-        >
-          <img src={starred} alt="star" className="star-img" />
-        </button>
-      </div>
+      {/* <div className="star-container"> */}
+      <button
+        type="button"
+        testid="star"
+        onClick={changePriority}
+        className="star-button"
+      >
+        <img src={starred} alt="star" className="star-img" />
+      </button>
+      {/* </div> */}
     </li>
   )
 }
